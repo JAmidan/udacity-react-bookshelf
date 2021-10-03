@@ -42,7 +42,7 @@ render(){
                      <div className="book">
                           <div className="book-top">
                             <div className="book-cover" style={{ width: 128, height: 192 }}>
-                                <img style={{ width: 128, height: 192 }} src={book.imageLinks.smallThumbnail} alt={book.title}/>
+                            {typeof book.imageLinks !== 'undefined' &&  <img style={{ width: 128, height: 192 }} src={book.imageLinks.smallThumbnail} alt={book.title}/> }      
                             </div>
                             <div className="book-shelf-changer">
                               <select id={book.id} onChange={this.handleChange} defaultValue={book.shelf} >
